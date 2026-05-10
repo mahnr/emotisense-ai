@@ -1,0 +1,11 @@
+# ============================================================
+# requirements.txt — Python Dependencies
+# ============================================================
+Flask
+flask-cors
+scikit-learn
+pandas
+numpy
+nltk
+gunicorn
+joblib

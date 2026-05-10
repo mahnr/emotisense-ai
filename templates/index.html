@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EmotiSense AI</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="header">
+    <div class="logo">🧠 EmotiSense <span>AI</span></div>
+    <nav>
+      <button onclick="showSection('home')"      class="nav-btn active" id="nav-home">Home</button>
+      <button onclick="showSection('analyzer')"  class="nav-btn"        id="nav-analyzer">Analyzer</button>
+      <button onclick="showSection('dashboard')" class="nav-btn"        id="nav-dashboard">Dashboard</button>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- HOME SECTION                               -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="section-home" class="section active">
+
+    <!-- Hero -->
+    <div class="home-hero">
+      
+      <h1>Understand Your <span class="gradient-text">Emotions</span><br>Like Never Before</h1>
+      <p>EmotiSense AI reads your text and instantly detects what you're feeling </p>
+      <div class="home-btns">
+        <button onclick="showSection('analyzer')" class="btn-primary"> Try Analyzer</button>
+        <button onclick="showSection('dashboard')" class="btn-outline"> View Dashboard</button>
+      </div>
+    </div>
+
+    <!-- Emotion Cards -->
+    <div class="home-section-title"> Emotions We Detect 🎭</div>
+    <div class="emotion-grid">
+      <div class="emotion-card" style="--ec:#FFD700">
+        <span class="ec-emoji">😊</span>
+        <span class="ec-label">Joy</span>
+        <p>Happiness, delight, excitement</p>
+      </div>
+      <div class="emotion-card" style="--ec:#6495ED">
+        <span class="ec-emoji">😢</span>
+        <span class="ec-label">Sadness</span>
+        <p>Grief, sorrow, disappointment</p>
+      </div>
+      <div class="emotion-card" style="--ec:#FF4500">
+        <span class="ec-emoji">😠</span>
+        <span class="ec-label">Anger</span>
+        <p>Rage, frustration, irritation</p>
+      </div>
+      <div class="emotion-card" style="--ec:#FF6B9D">
+        <span class="ec-emoji">❤️</span>
+        <span class="ec-label">Love</span>
+        <p>Affection, warmth, care</p>
+      </div>
+      <div class="emotion-card" style="--ec:#9370DB">
+        <span class="ec-emoji">😨</span>
+        <span class="ec-label">Fear</span>
+        <p>Anxiety, worry, dread</p>
+      </div>
+      <div class="emotion-card" style="--ec:#FF69B4">
+        <span class="ec-emoji">😲</span>
+        <span class="ec-label">Surprise</span>
+        <p>Shock, amazement, wonder</p>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="home-section-title"> How It Works</div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">1</div>
+        <div class="how-icon">✍️</div>
+        <h3>Type Your Text</h3>
+        <p>Write anything — a sentence, a feeling, a thought. No limits.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">2</div>
+        <div class="how-icon">🧠</div>
+        <h3>AI Analyzes</h3>
+        <p>Our NLP model processes your text using Machine Learning trained on 16,000+ examples.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">3</div>
+        <div class="how-icon">💡</div>
+        <h3>Get Insights</h3>
+        <p>See your emotion, confidence score, motivational message, and download your report.</p>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="home-section-title">About EmotiSense AI</div>
+    <div class="about-card">
+      <div class="about-left">
+        <h2>What is <span class="gradient-text">EmotiSense AI?</span></h2>
+        <p>EmotiSense AI is an intelligent emotion detection system built with Python, Flask, and Machine Learning. It uses Natural Language Processing (NLP) to understand the emotional tone behind any piece of text.</p>
+        <br>
+        <p>Whether you're journaling, analyzing feedback, or just curious about your feelings — EmotiSense gives you real-time emotional insights powered by a Logistic Regression model trained on the HuggingFace Emotion Dataset.</p>
+        <br>
+        <div class="about-tags">
+          <span class="tag">🐍 Python</span>
+          <span class="tag">⚗️ Flask</span>
+          <span class="tag">🤖 scikit-learn</span>
+          <span class="tag">📊 TF-IDF</span>
+          <span class="tag">💬 NLP</span>
+      
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="stat-big">16K+<span>Training Samples</span></div>
+        <div class="stat-big">6<span>Emotions Detected</span></div>
+        <div class="stat-big">90%+<span>Model Accuracy</span></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <h2>Ready to discover your emotions? 🚀</h2>
+      <p>It's free, instant, and surprisingly accurate.</p>
+      <button onclick="showSection('analyzer')" class="btn-primary" style="margin-top:1.2rem;font-size:1.1rem;padding:.8rem 2.5rem">
+       Start Analyzing
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ANALYZER SECTION                           -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="section-analyzer" class="section hidden">
+    <div class="hero">
+      <h1>Detect Your <span class="gradient-text">Emotions</span> with AI</h1>
+      <p>Every text has a hidden story, uncover it.</p>
+    </div>
+    <div class="card input-card">
+      <textarea id="user-input" placeholder="Express yourself… How are you feeling today?" rows="5"></textarea>
+      <div class="input-meta">
+        <span id="char-count">0 / 500</span>
+        <div class="btn-group">
+          <button id="voice-btn" title="Voice Input">Voice🎙️</button>
+          <button id="analyze-btn" onclick="analyzeEmotion()"> Analyze✨</button>
+          <button id="clear-btn" onclick="clearInput()">clear🗑️</button>
+        </div>
+      </div>
+    </div>
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Analyzing your emotions…</p>
+    </div>
+    <div id="result-card" class="card result-card hidden">
+      <div class="result-header">
+        <span id="res-emoji" class="big-emoji"></span>
+        <div><h2 id="res-primary"></h2></div>
+        <span id="res-confidence" class="badge"></span>
+      </div>
+      <div class="progress-wrap">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div class="result-body">
+        <div class="message-box" id="res-message"></div>
+        <p class="reasoning" id="res-reasoning"></p>
+      </div>
+      <button onclick="downloadReport()" class="download-btn">⬇️ Download Report</button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- DASHBOARD SECTION                          -->
+  <!-- ══════════════════════════════════════════ -->
+  <section id="section-dashboard" class="section hidden">
+    <div class="hero">
+      <h1>Your Emotion <span class="gradient-text">Dashboard</span></h1>
+      <p>Track patterns in your emotional history.</p>
+    </div>
+    <div class="dash-grid">
+      <div class="card stat-card"><p class="stat-label">Total Analyses</p><h2 id="stat-total">0</h2></div>
+      <div class="card stat-card"><p class="stat-label">Most Detected</p><h2 id="stat-top">—</h2></div>
+      <div class="card stat-card"><p class="stat-label">Avg Confidence</p><h2 id="stat-avg">—</h2></div>
+    </div>
+    <div class="card chart-card">
+      <h3>Emotion Distribution</h3>
+      <canvas id="emotionChart" height="70"></canvas>
+    </div>
+    <div class="card">
+      <h3>Recent Analyses</h3>
+      <div id="history-list"></div>
+    </div>
+    <button onclick="clearHistory()" class="clear-hist-btn"> Clear History🗑️</button>
+  </section>
+
+  <script src="/static/script.js"></script>
+  <script src="/static/charts.js"></script>
+</body>
+</html>
