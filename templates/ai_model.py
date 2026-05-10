@@ -9,7 +9,7 @@ classifier = pipeline(
 def detect_emotion(text):
     results = classifier(text)[0]
 
-    # Sort highest confidence first
+    
     results = sorted(results, key=lambda x: x['score'], reverse=True)
 
     top = results[0]

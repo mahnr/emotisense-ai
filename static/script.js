@@ -81,7 +81,7 @@ const _s = document.createElement("style");
 _s.textContent = `@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}`;
 document.head.appendChild(_s);
 
-// Ye poora function dhundo aur replace karo script.js mein
+
 function showSection(name) {
   ["home", "analyzer", "dashboard"].forEach(s => {
     $("section-"+s).classList.toggle("active", s===name);

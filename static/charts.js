@@ -1,11 +1,3 @@
-/* ============================================================
-   charts.js — Chart.js Emotion Distribution Chart
-   ============================================================ */
-// ═══════════════════════════════════════════
-// CHANGE 1: static/charts.js
-// Chart chhota karo — height kam karo
-// ═══════════════════════════════════════════
-
 let emotionChart = null;
 
 function renderChart(freq) {
@@ -38,7 +30,7 @@ function renderChart(freq) {
     },
     options: {
       responsive: true,
-      cutout: "55%",   /* ← mota ring */
+      cutout: "55%",   
       plugins: {
         legend: {
           position: "bottom",

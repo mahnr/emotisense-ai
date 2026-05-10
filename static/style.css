@@ -1,6 +1,4 @@
-/* ============================================================
-   style.css — EmotiSense AI Dark Futuristic Theme
-   ============================================================ */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -143,8 +141,8 @@ background-clip: text;
 
 
 .chart-card {
-  max-width: 420x;      /* card chhota */
-  margin: 0 auto 1.5rem; /* center */
+  max-width: 420x;      
+  margin: 0 auto 1.5rem; 
 }
 
 #emotionChart {
