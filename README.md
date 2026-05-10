@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧠 EmotiSense AI — Emotion Detection System
 
 AI-powered web app that detects 12 emotions from text using NLP + ML.
@@ -56,3 +57,7 @@ Replace dataset.csv with:
 
 ## 🔑 Tech Stack
 Python · Flask · scikit-learn · NLTK · TF-IDF · Chart.js
+=======
+# emotisense-ai
+AI-Powered Emotion Detection System using NLP and Flask
+>>>>>>> 889c7cfa7879ee2acc96bf2e5fee4a42e101033b
