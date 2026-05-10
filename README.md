@@ -1,63 +1,40 @@
-<<<<<<< HEAD
-# 🧠 EmotiSense AI — Emotion Detection System
+# EmotiSense AI
 
-AI-powered web app that detects 12 emotions from text using NLP + ML.
+An emotion detection web app built with Python, Flask and Machine Learning. Type any text and it tells you what emotion you're feeling.
 
-## 🚀 Quick Start
+🔗 Live Demo: https://web-production-3f1bb.up.railway.app
+
+
+## What it does
+
+- Detects 6 emotions from text: Joy, Sadness, Anger, Fear, Love, Surprise
+- Shows confidence score and motivational message
+- Dashboard with emotion history and chart
+- Voice input and downloadable report
+
+## Built with
+
+- Python & Flask
+- scikit-learn — Logistic Regression + TF-IDF
+- NLTK for text preprocessing
+- HTML, CSS, JavaScript
+- Chart.js
+- Dataset: HuggingFace dair-ai/emotion (16,000+ rows)
+- Accuracy: 89%+
+
+## Run locally
 
 ```bash
-# 1. Clone & enter project
-git clone https://github.com/yourname/emotion-detector
-cd emotion-detector
-
-# 2. Create virtual environment
+git clone https://github.com/mahnr/emotisense-ai
+cd emotisense-ai
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-
-# 3. Install dependencies
+venv\Scripts\activate
 pip install -r requirements.txt
-
-# 4. Download NLTK data
-python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet')"
-
-# 5. Train the model (uses dataset.csv)
-python model_training.py
-
-# 6. Run the Flask app
+python download_dataset.py
+python train_model.py
 python app.py
-```
 
-Open http://localhost:5000 in your browser.
+Open http://localhost:5000
 
-## 📁 Structure
-emotion-detector/
-├── app.py               Flask backend
-├── model_training.py    ML training script
-├── dataset.csv          Training data
-├── requirements.txt
-├── templates/index.html Frontend
-├── static/
-│   ├── style.css
-│   ├── script.js
-│   └── charts.js
-└── model/
-    ├── emotion_model.pkl
-    └── vectorizer.pkl
-
-## 🎯 Emotions Detected
-Happy 😊 • Sad 😢 • Angry 😠 • Fearful 😨 • Surprised 😲
-Loving ❤️ • Excited 🤩 • Anxious 😰 • Confused 😕
-Lonely 😔 • Motivated 💪 • Neutral 😐
-
-## 💡 Getting a Better Dataset
-Replace dataset.csv with:
-- Kaggle: "Emotions" by dair-ai (~20 000 rows)
-- HuggingFace: datasets.load_dataset("emotion")
-- GoEmotions by Google Research
-
-## 🔑 Tech Stack
-Python · Flask · scikit-learn · NLTK · TF-IDF · Chart.js
-=======
-# emotisense-ai
-AI-Powered Emotion Detection System using NLP and Flask
->>>>>>> 889c7cfa7879ee2acc96bf2e5fee4a42e101033b
+Made by Mahnoor Naseem
+⭐ If you like this project, please give it a star!
